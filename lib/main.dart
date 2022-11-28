@@ -75,6 +75,7 @@ class _CalculatorState extends State<Calculator> {
         children: [
           Expanded(
               child: Container(
+                color: Colors.white,
             width: double.infinity,
             padding: const EdgeInsets.all(12),
             child: Column(
@@ -83,22 +84,22 @@ class _CalculatorState extends State<Calculator> {
               children: [
                 Text(
                   hideInput ? '' : input,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 48,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
-                SizedBox(
+               const SizedBox(
                   height: 20,
                 ),
                 Text(
                   result,
                   style: TextStyle(
                     fontSize: resultSize,
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.black.withOpacity(0.7),
                   ),
                 ),
-                SizedBox(
+              const SizedBox(
                   height: 20,
                 ),
               ],
@@ -148,9 +149,9 @@ class _CalculatorState extends State<Calculator> {
           ),
           Row(
             children: [
-              calcButton(calcText: '3'),
-              calcButton(calcText: '2'),
               calcButton(calcText: '1'),
+              calcButton(calcText: '2'),
+              calcButton(calcText: '3'),
               calcButton(
                   calcText: '+',
                   buttonColor: Colors.white,
